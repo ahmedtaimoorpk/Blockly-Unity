@@ -16,14 +16,68 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
+    <title>Font Awesome Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+<style>
+
+ #run {
+     background-color: cornflowerblue;
+     border: cornflowerblue;
+     border-radius: 8px;
+     color: white;
+     padding: 15px 60px;
+     text-align: center;
+     display: inline-block;
+     font-size: 20px;
+ }
+
+  #clear {
+      background-color: firebrick;
+      border: firebrick;
+      border-radius: 8px;
+      color: white;
+      padding: 15px 60px;
+      text-align: center;
+      display: inline-block;
+      font-size: 20px;
+  }
+
+   #upload {
+       background-color: goldenrod;
+       border: goldenrod;
+       border-radius: 8px;
+       color: white;
+       padding: 15px 50px;
+       text-align: center;
+       display: inline-block;
+       font-size: 20px;
+   }
+
+    #save {
+        background-color: forestgreen;
+        border: forestgreen;
+        border-radius: 8px;
+        color: white;
+        padding: 15px 60px;
+        text-align: center;
+        display: inline-block;
+        font-size: 20px;
+    }
+</style>
+
 <body>
 <table>
     <tr>
         <td id="blocklyArea" width="40%"></td>
         <td width="60%">
-            <button class="mode-maker mdl-button" id="run">Run</button>
+            <button class="mode-maker mdl-button" id="run">Run    <i class="fa fa-play"></i> </button>
+            <button class="mode-maker mdl-button" id="clear">Clear <i class="fa fa-close"> </i></button>
+            <button class="mode-maker mdl-button" id="upload">Open  <i class="fa fa-cloud-upload"></i> </button>
+            <button class="mode-maker mdl-button" id="save">Save <i class="fas fa-save"></i></button>
+
             <div id="unityArea" style="height: 560px">
                 <div id="unityContainer" style="height: 100%;"></div>
             </div>
@@ -65,3 +119,5 @@
 
 </body>
 </html>
+
+
