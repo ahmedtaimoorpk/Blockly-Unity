@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>UnityBlockO</title>
+
+    <link rel="stylesheet" href="styles/index.css">
+
+    <!-- Bockly-->
+    <script src="../../blockly_compressed.js"></script>
+    <script src="../../blocks_compressed.js"></script>
+    <script src="../../javascript_compressed.js"></script>
+    <script src="../../msg/js/en.js"></script>
+
+    <!--Unity -->
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+
+</head>
+<body>
+<table>
+    <tr>
+        <td id="blocklyArea" width="40%"></td>
+        <td width="60%">
+            <button class="mode-maker mdl-button" id="run">Run</button>
+            <div id="unityArea" style="height: 560px">
+                <div id="unityContainer" style="height: 100%;"></div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<div id="blocklyDiv" style="position: absolute"></div>
+
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+    <category name="Loops" colour="120">
+        <block type="controls_repeat_ext">
+            <value name="TIMES">
+                <shadow type="math_number">
+                    <field name="NUM">5</field>
+                </shadow>
+            </value>
+        </block>
+    </category>
+    <category name="Sounds" colour="355">
+        <block type="shapes"></block>
+    </category>
+</xml>
+
+<script>
+    var unityInstance = UnityLoader.instantiate("unityContainer", "Build/webgl & browser communication.json", {onProgress: UnityProgress});
+
+    function f1(value) {
+        unityInstance.SendMessage("Main Camera", "ctrl", value);
+    }
+
+    var unityArea = document.getElementById('unityArea');
+
+</script>
+
+<script src="scripts/customBlocks.js"></script>
+<script src="scripts/main.js"></script>
+
+
+</body>
+</html>

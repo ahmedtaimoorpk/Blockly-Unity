@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "webGl & browser communication",
+"productVersion": "0.1",
+"dataUrl": "webgl & browser communication.data.unityweb",
+"wasmCodeUrl": "webgl & browser communication.wasm.code.unityweb",
+"wasmFrameworkUrl": "webgl & browser communication.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.19f1"
+}
